@@ -2,8 +2,8 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-8">
-                @foreach( $posts as $post )
                 <!-- Post content-->
+                @foreach( $posts as $post )
                 <article>
                     <!-- Post header-->
                     <header class="mb-4">
@@ -111,16 +111,21 @@
                     <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
                 </div>
                 <!-- edit dan delete -->
-                <tr>
-                    <td>
-                        <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info">Edit</a>
-                        <a href="{{ route('posts.destroy', ['post' => $post->id]) }}" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
+                <div class="text-end me-auto">
+                    <!-- <a href="" class="btn btn-info">Edit</a>
+
+                    <form action="" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form> -->
+
+                </div>
+
             </div>
-            @endforeach
+
         </div>
     </div>
-
+    @endforeach
     <!-- Footer-->
 </x-layout>

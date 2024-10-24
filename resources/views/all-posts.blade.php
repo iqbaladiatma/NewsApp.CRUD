@@ -20,11 +20,11 @@
                         <div class="entry-header mb-3">
                             <ul class="entry-meta list-unstyled d-flex mb-2">
                                 <li>
-                                    <a class="link-primary text-decoration-none" href="#!">{{ $post->title }}</a>
+                                    <h4 class="link-primary text-decoration-none">{{ $post->title }}</h4>
                                 </li>
                             </ul>
                             <h2 class="card-title entry-title h4 mb-0">
-                                <a class="link-dark text-decoration-none" href="#!">{{ $post->blog }}</a>
+                                <a class="link-dark text-decoration-none">{{ $post->blog }}</a>
                             </h2>
                         </div>
                         <p class="card-text entry-summary text-secondary mb-3">

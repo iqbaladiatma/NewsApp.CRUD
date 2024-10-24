@@ -32,6 +32,7 @@ Route::get('all-posts', function () {
 });
 
 Route::get('postals', function () {
+    $posts = Post::all();
     return view('postals', ['title' => 'All Posts', 'posts' => [
         [
             'title' => 'About Stock',
@@ -51,8 +52,8 @@ Route::get('postals', function () {
 });
 Route::resource('posts', controller: \App\Http\Controllers\PostController::class,);
 Route::get('posts/{post}', [\App\Http\Controllers\PostController::class, 'destroy'])->name('posts.destroy');
-Route::get('/posts/{post}', function (Post $post) {
-    return view('post', ['title' => 'Single Post', 'post' => $post]);
-});
+Route::get('postsals/{post}', [\App\Http\Controllers\PostController::class, 'destroy'])->name('posts.destroy');
+
+
 // Route::resource('posts', controller: \App\Http\Controllers\PostController::class);
 // Route::get('todos/{todo}', [\App\Http\Controllers\PostController::class, 'destroy'])->name('posts.destroy');

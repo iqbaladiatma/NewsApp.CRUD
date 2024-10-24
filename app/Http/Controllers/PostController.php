@@ -79,6 +79,7 @@ class PostController extends Controller
 
         $validator = Validator::make($request->all(), [
             'title' => 'required',
+
             'postingan' => 'required',
         ]);
 
